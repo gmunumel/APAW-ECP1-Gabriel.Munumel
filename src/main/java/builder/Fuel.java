@@ -2,5 +2,6 @@ package builder;
 
 public enum Fuel {
 	GASOLINA,
-	DIESEL
+	DIESEL,
+	NONE;
 }

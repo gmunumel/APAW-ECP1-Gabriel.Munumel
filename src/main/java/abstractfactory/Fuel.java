@@ -2,5 +2,6 @@ package abstractfactory;
 
 public enum Fuel {
 	GASOLINA,
-	DIESEL
+	DIESEL,
+	NONE;
 }
