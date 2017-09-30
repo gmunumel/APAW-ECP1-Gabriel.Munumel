@@ -11,5 +11,5 @@ import org.junit.runners.Suite.SuiteClasses;
     VehicleTest.class,
     VehicleBuilderTest.class
 })
-public class AllTests {
+public class AllBuilderTests {
 }

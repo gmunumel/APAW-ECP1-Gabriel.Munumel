@@ -55,15 +55,11 @@ public class Vehicle {
 		return fuel;
 	}
 	
-	public void setFuel(Fuel fuel) {
-		this.fuel = fuel;
-	}
-	
 	public boolean driverContains(Driver driver) {
         if (drivers == null) {
             return false;
         } else {
             return drivers.contains(driver);
         }
-    }
+    } 
 }
