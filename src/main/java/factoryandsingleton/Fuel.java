@@ -1,4 +1,4 @@
-package builder;
+package factoryandsingleton;
 
 public enum Fuel {
 	GASOLINE,

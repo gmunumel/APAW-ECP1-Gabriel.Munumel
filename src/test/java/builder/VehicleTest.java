@@ -16,11 +16,11 @@ public class VehicleTest {
         drivers.add(new Driver(1, "1234", 6L));
         drivers.add(new Driver(2, "5678", 7L));
         drivers.add(new Driver(3, "2461", 8L));
-		Vehicle vehicle = new Vehicle(1L, "BMW", "T1000", drivers, Fuel.GASOLINA);
+		Vehicle vehicle = new Vehicle(1L, "BMW", "T1000", drivers, Fuel.GASOLINE);
 		assertEquals(1L, vehicle.getId(), 0);
 		assertEquals("BMW", vehicle.getBrand());
 		assertEquals("T1000", vehicle.getModel());
-		assertEquals(Fuel.GASOLINA, vehicle.getFuel());
+		assertEquals(Fuel.GASOLINE, vehicle.getFuel());
 		assertEquals(3, vehicle.getDrivers().size());
 	}
 	

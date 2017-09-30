@@ -16,7 +16,7 @@ public class VehicleBuilderTest {
 		assertEquals(1L, vehicle.getId(), 0);
 		assertEquals("Ferrari", vehicle.getBrand());
 		assertEquals("Carrera", vehicle.getModel());
-		assertEquals(Fuel.GASOLINA, vehicle.getFuel());
+		assertEquals(Fuel.GASOLINE, vehicle.getFuel());
 		assertEquals(3, vehicle.getDrivers().size());
 	}
 	

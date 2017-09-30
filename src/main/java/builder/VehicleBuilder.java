@@ -20,7 +20,7 @@ public class VehicleBuilder {
 	}
 	
 	public VehicleBuilder id(Long id) {
-		this.vehicle = new Vehicle(id, "", "", Collections.<Driver>emptyList(), Fuel.GASOLINA);
+		this.vehicle = new Vehicle(id, "", "", Collections.<Driver>emptyList(), Fuel.GASOLINE);
 		return this;
 	}
 	
