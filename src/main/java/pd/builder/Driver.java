@@ -18,20 +18,20 @@ public class Driver {
 		return id;
 	}
 	
-	public String getReference() {
-		return reference;
+	public void setPhone(Long phone) {
+		this.phone = phone;
 	}
 	
-	public void setReference(String reference) {
-		this.reference = reference;
+	public String getReference() {
+		return reference;
 	}
 	
 	public Long getPhone() {
 		return phone;
 	}
 	
-	public void setPhone(Long phone) {
-		this.phone = phone;
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 	
 }

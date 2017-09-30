@@ -35,6 +35,14 @@ public class Vehicle {
 		this.brand = brand;
 	}
 	
+	public Fuel getFuel() {
+		return fuel;
+	}
+	
+	public List<Driver> getDrivers() {
+		return drivers;
+	}
+	
 	public String getModel() {
 		return model;
 	}
@@ -42,18 +50,12 @@ public class Vehicle {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	
-	public List<Driver> getDrivers() {
-		return drivers;
-	}
-	
+
 	public void setDrivers(List<Driver> drivers) {
 		this.drivers = drivers;
 	}
 	
-	public Fuel getFuel() {
-		return fuel;
-	}
+	
 	
 	public boolean driverContains(Driver driver) {
         if (drivers == null) {
