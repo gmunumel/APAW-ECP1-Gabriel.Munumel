@@ -1,5 +1,6 @@
-package factoryandsingleton;
+package pd.factoryandsingleton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vehicle {
@@ -13,6 +14,14 @@ public class Vehicle {
 	private List<Driver> drivers;
 	 
 	private Fuel fuel;
+	
+	public Vehicle(Long id) {
+		this.id = id;
+		this.brand = "";
+		this.model = "";
+		this.drivers = new ArrayList<Driver>();
+		this.fuel = Fuel.DIESEL;
+	}
 	
 	public Vehicle(Long id, String brand, 
 			String model, List<Driver> drivers, Fuel fuel) {

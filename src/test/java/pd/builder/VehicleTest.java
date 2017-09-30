@@ -1,4 +1,4 @@
-package builder;
+package pd.builder;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+
+import pd.builder.Driver;
+import pd.builder.Fuel;
+import pd.builder.Vehicle;
 
 public class VehicleTest {
 	

@@ -1,4 +1,4 @@
-package builder;
+package pd.factoryandsingleton;
 
 public enum Fuel {
 	GASOLINE,

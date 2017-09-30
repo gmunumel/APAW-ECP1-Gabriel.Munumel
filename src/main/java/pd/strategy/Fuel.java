@@ -1,4 +1,4 @@
-package strategy;
+package pd.strategy;
 
 public enum Fuel {
 	GASOLINA,

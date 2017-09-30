@@ -1,4 +1,4 @@
-package strategy;
+package pd.strategy;
 
 public class Vehicle {
 	

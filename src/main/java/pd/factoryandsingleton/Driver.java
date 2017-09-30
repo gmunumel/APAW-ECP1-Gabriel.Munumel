@@ -1,4 +1,4 @@
-package builder;
+package pd.factoryandsingleton;
 
 public class Driver {
 	
@@ -7,6 +7,12 @@ public class Driver {
 	private String reference;
 	
 	private Long phone; 
+	
+	public Driver(int id) {
+		this.id = id;
+		this.reference = "";
+		this.phone = 0L;
+	}
 
 	public Driver(int id, String reference, Long phone) {
 		this.id = id;

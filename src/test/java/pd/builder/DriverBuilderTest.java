@@ -1,8 +1,11 @@
-package builder;
+package pd.builder;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import pd.builder.Driver;
+import pd.builder.DriverBuilder;
 
 public class DriverBuilderTest {
 

@@ -1,4 +1,4 @@
-package composite;
+package pd.strategy;
 
 public class Driver {
 	
