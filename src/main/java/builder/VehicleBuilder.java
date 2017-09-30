@@ -16,11 +16,11 @@ public class VehicleBuilder {
 	}
 	
 	public VehicleBuilder() {
-		this(0L, "", "", Collections.<Driver>emptyList(), Fuel.NONE);
+		this(0L, "", "", Collections.<Driver>emptyList(), Fuel.DIESEL);
 	}
 	
 	public VehicleBuilder id(Long id) {
-		this.vehicle = new Vehicle(id, "", "", Collections.<Driver>emptyList(), Fuel.NONE);
+		this.vehicle = new Vehicle(id, "", "", Collections.<Driver>emptyList(), Fuel.GASOLINA);
 		return this;
 	}
 	
