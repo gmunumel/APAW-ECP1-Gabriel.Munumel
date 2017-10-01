@@ -21,12 +21,7 @@ public class DriverFactory {
 	}
 	
 	public Driver getDriver(int key) { 
-		Driver driver = this.drivers.get(key);
-        if (driver == null) {
-        		driver = createDriver(key);
-            this.drivers.put(key, driver); 
-        }
-        return driver;
+		return this.drivers.computeIfAbsent(key, k -> createDriver(key));
 	}
 	
 	public void removeDriver(int key) {

@@ -22,12 +22,7 @@ public class VehicleFactory {
 	}
 	
 	public Vehicle getVehicle(Long key) { 
-		Vehicle vehicle = this.vehicles.get(key);
-        if (vehicle == null) {
-        		vehicle = createVehicle(key);
-            this.vehicles.put(key, vehicle); 
-        }
-        return vehicle;
+		return this.vehicles.computeIfAbsent(key, k -> createVehicle(key));
 	}
 	
 	public void removeVehicle(Long key) {

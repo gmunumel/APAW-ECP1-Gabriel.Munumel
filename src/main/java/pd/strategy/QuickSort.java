@@ -10,9 +10,6 @@ public class QuickSort implements Strategy {
     
 	public void sort(int[] values) {
 		System.out.print("sorting array using quick sort strategy - ");
-		if (values == null || values.length == 0){
-            return;
-        }
         this.numbers = values;
         number = values.length;
         quicksort(0, number - 1);
