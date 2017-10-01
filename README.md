@@ -31,9 +31,10 @@ inconvenientes. La mantenibilidad se ve favorablemente impactada dado que si en 
 agregar un nuevo algoritmo de ordenación solo se debe crear su clase que implemente el método `sort` y 
 utilizarla como otra estrategia mas. La limpieza en el código también es mejorada dado que no se requiere
 crear un gran bloque `if-else` para hacer una selección del algoritmo de ordenación sino que dependiendo de 
-la lógica del negocio se llama. 
+la lógica del negocio se llama.   
 
 El diagrama UML para el caso práctico es:
+
 ![alt text](strategy-uml.png "Patrón de Diseño Strategy")
 
 
@@ -41,7 +42,6 @@ Fuentes:
 * [https://alvinalexander.com/java/java-strategy-design-pattern-in-java](https://alvinalexander.com/java/java-strategy-design-pattern-in-java)
 * [http://www.java67.com/2014/12/strategy-pattern-in-java-with-example.html](http://www.java67.com/2014/12/strategy-pattern-in-java-with-example.html)
 * [https://en.wikipedia.org/wiki/Strategy_pattern](https://en.wikipedia.org/wiki/Strategy_pattern)
-
 
 
 

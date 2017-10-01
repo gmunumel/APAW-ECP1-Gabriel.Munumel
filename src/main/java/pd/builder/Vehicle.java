@@ -55,8 +55,6 @@ public class Vehicle {
 		this.drivers = drivers;
 	}
 	
-	
-	
 	public boolean driverContains(Driver driver) {
         if (drivers == null) {
             return false;
