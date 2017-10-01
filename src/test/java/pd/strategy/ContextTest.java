@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class ContextTest { 
 
-	private static int NUMBERS = 10000; 
+	private static int NUMBERS = 100; 
 	
 	private Context ctx;
 	
