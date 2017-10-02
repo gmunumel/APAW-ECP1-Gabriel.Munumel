@@ -3,26 +3,29 @@ package pd.factoryandsingleton;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VehicleFactory {
-
-	private static final VehicleFactory factory = new VehicleFactory(); 
+public class VehicleSingletonFactory { 
+	private static final VehicleSingletonFactory factory = new VehicleSingletonFactory(); 
+	
+	private Vehicle vehicle = null;
 	
 	private Map<Long, Vehicle> vehicles;
 	
-	private VehicleFactory() {
+	private VehicleSingletonFactory() {
 		this.vehicles = new HashMap<Long, Vehicle>();
+		this.vehicle = new Vehicle();
 	}
 	
-	public static VehicleFactory getFactory() {
+	public static VehicleSingletonFactory getFactory() {
 		return factory;
 	}
 	
-	public static Vehicle createVehicle(Long id) { 
-		return new Vehicle(id);
+	public void createVehicle(Long key) { 
+		this.vehicle.setId(key);
+		this.vehicles.put(key, vehicle);
 	}
 	
 	public Vehicle getVehicle(Long key) { 
-		return this.vehicles.computeIfAbsent(key, k -> createVehicle(key));
+		return this.vehicles.get(key);
 	}
 	
 	public void removeVehicle(Long key) {

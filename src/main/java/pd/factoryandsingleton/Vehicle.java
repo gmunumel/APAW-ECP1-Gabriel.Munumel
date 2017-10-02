@@ -15,6 +15,14 @@ public class Vehicle {
 	 
 	private Fuel fuel;
 	
+	public Vehicle() {
+		this.id = 0L;
+		this.brand = "";
+		this.model = "";
+		this.drivers = new ArrayList<Driver>();
+		this.fuel = Fuel.DIESEL;
+	}
+	
 	public Vehicle(Long id) {
 		this.id = id;
 		this.brand = "";
@@ -34,6 +42,10 @@ public class Vehicle {
 	
 	public Long getId() {
 		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	public String getBrand() {

@@ -3,25 +3,29 @@ package pd.factoryandsingleton;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DriverFactory {
-	private static final DriverFactory factory = new DriverFactory(); 
+public class DriverSingletonFactory { 
+	private static final DriverSingletonFactory factory = new DriverSingletonFactory(); 
+	
+	private Driver driver = null;
 	
 	private Map<Integer, Driver> drivers;
 	
-	private DriverFactory() {
+	private DriverSingletonFactory() { 
 		this.drivers = new HashMap<Integer, Driver>();
+		this.driver = new Driver();
 	}
-	
-	public static DriverFactory getFactory() {
+
+	public static synchronized DriverSingletonFactory getFactory() {
 		return factory;
 	}
 	
-	public static Driver createDriver(int id) { 
-		return new Driver(id);
+	public void createDriver(int key) {
+		this.driver.setId(key);
+		this.drivers.put(key, driver);
 	}
 	
 	public Driver getDriver(int key) { 
-		return this.drivers.computeIfAbsent(key, k -> createDriver(key));
+		return this.drivers.get(key);
 	}
 	
 	public void removeDriver(int key) {

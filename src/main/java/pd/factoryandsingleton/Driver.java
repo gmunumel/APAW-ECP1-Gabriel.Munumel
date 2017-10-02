@@ -6,7 +6,13 @@ public class Driver {
 	
 	private String reference;
 	
-	private Long phone; 
+	private Long phone;
+	
+	public Driver() {
+		this.id = 0;
+		this.reference = "";
+		this.phone = 0L;
+	}
 	
 	public Driver(int id) {
 		this.id = id;
@@ -22,6 +28,10 @@ public class Driver {
 	
 	public int getId() {
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public String getReference() {

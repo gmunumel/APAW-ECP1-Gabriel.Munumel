@@ -40,6 +40,16 @@ public class VehicleTest {
 	}
 	
 	@Test
+	public void testVehicle() { 
+		Vehicle vehicle = new Vehicle();
+		assertEquals(0L, vehicle.getId(), 0);
+		assertEquals("", vehicle.getBrand());
+		assertEquals("", vehicle.getModel());
+		assertEquals(Fuel.DIESEL, vehicle.getFuel());
+		assertEquals(0, vehicle.getDrivers().size());
+	}
+	
+	@Test
     public void testDriverContainsFalseNullDrivers(){
         List<Driver> drivers = null;
         Vehicle vehicle = new Vehicle(1L, "Ferrari", "Testarossa", drivers, Fuel.DIESEL);
