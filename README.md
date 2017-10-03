@@ -4,14 +4,28 @@
 
 ---
 
+Cada apartado del enunciado se ha dividido por carpetas y no se han mezclado las soluciones entre si. Las carpetas son:
+* _builder_
+* _composite_
+* _factoryandsingleton_
+* _strategy_
+
+Para los tests se ha seguido la misma estructura.
+
 ## Patrón de Diseño Factory con Singleton
 
 Se ha realizado este apartado tomando ideas del patrón _Flyweight_, en el cual se tiene un valor intrinseco
-(permanente) que se puede compartir y un valor extrinseco (cambiante) que se puede transmitir.
+(permanente) que se puede compartir y un valor extrinseco (cambiante) que se puede transmitir. Sin embargo, no se
+ha implementado por completo dado que complicaba la solución del enunciado.
 
 Fuentes: 
 * [http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2](http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2)
+* [http://coding-geek.com/design-pattern-factory-patterns/](http://coding-geek.com/design-pattern-factory-patterns/)
 * [https://en.wikipedia.org/wiki/Flyweight_pattern](https://en.wikipedia.org/wiki/Flyweight_pattern)
+
+## Patrón de Diseño Builder
+
+Se ha aplicado el patrón para ambas entidades `Driver` y `Vehicle`. 
 
 ## Patrón de Diseño Strategy
 
