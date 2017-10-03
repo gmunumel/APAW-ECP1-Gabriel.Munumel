@@ -21,7 +21,7 @@ public class DriverFactorySingleton {
 	}
 
 	public Driver getDriver(int key) {
-		return drivers.computeIfAbsent(key, k -> new Driver(k));
+		return drivers.computeIfAbsent(key, k -> new DriverFlyweight(key).add());
 	}
 	
 	public void removeDriver(int key) {

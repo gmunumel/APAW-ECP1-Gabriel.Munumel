@@ -20,15 +20,8 @@ public class VehicleFactorySingleton {
 		return vehicleFactorySingleton;
 	}
 	
-	public Vehicle getVehicle(Long key) { 
-//		if (vehicles.containsKey(key)) {
-//			return vehicles.get(key);
-//		} else {
-//			Vehicle vehicle = new Vehicle(key);
-//			vehicles.put(key, vehicle);
-//			return vehicle;
-//		}
-		return vehicles.computeIfAbsent(key, k -> new Vehicle(k));
+	public Vehicle getVehicle(Long key) {  
+		return vehicles.computeIfAbsent(key, k -> new VehicleFlyweight(key).add());
 	}
 	
 	public void removeVehicle(Long key) {

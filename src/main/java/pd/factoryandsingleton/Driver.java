@@ -29,11 +29,7 @@ public class Driver {
 	public int getId() {
 		return id;
 	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
-	
+
 	public String getReference() {
 		return reference;
 	}

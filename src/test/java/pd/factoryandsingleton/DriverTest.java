@@ -33,14 +33,6 @@ public class DriverTest {
 	}
 	
 	@Test
-	public void testDriverSetId() { 
-		Driver driver = new Driver(1, "QWR123", 3L);
-		assertEquals(1, driver.getId());
-		driver.setId(2);
-		assertEquals(2, driver.getId());
-	}
-	
-	@Test
 	public void testDriverSetReference() { 
 		Driver driver = new Driver(1, "QWR123", 3L);
 		assertEquals("QWR123", driver.getReference());
