@@ -4,6 +4,15 @@
 
 ---
 
+## Patrón de Diseño Factory con Singleton
+
+Se ha realizado este apartado tomando ideas del patrón _Flyweight_, en el cual se tiene un valor intrinseco
+(permanente) que se puede compartir y un valor extrinseco (cambiante) que se puede transmitir.
+
+Fuentes: 
+* [http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2](http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2)
+* [https://en.wikipedia.org/wiki/Flyweight_pattern](https://en.wikipedia.org/wiki/Flyweight_pattern)
+
 ## Patrón de Diseño Strategy
 
 El patrón de diseño _Strategy_ es un patrón de comportamiento que permite seleccionar un algoritmo 

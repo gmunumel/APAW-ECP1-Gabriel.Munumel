@@ -6,7 +6,7 @@ public class Driver {
 	
 	private String reference;
 	
-	private Long phone;
+	private Long phone; 
 	
 	public Driver() {
 		this.id = 0;

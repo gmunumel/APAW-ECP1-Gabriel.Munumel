@@ -7,9 +7,9 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
     DriverTest.class,
-    DriverSingletonFactoryTest.class,
+    DriverFactorySingletonTest.class,
     VehicleTest.class,
-    VehicleSingletonFactoryTest.class
+    VehicleFactorySingletonTest.class
 })
 public class AllFactoryAndSingletonTests {
 }
