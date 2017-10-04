@@ -1,26 +1,43 @@
 package pd.composite;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vehicle {
 	
 	private Long id;
 	
-	private String brand;
-	
 	private String model;
 	
-	private List<Driver> drivers;
-	 
+	private String brand;
+	
 	private Fuel fuel;
 	
-	public Vehicle(Long id, String brand, 
+	private List<Driver> drivers;
+	
+	public Vehicle(Long id, String brand,  
 			String model, List<Driver> drivers, Fuel fuel) {
 		this.id = id;
 		this.brand = brand;
 		this.model = model;
 		this.drivers = drivers;
 		this.fuel = fuel;
+	}
+	
+	public Vehicle() {
+		this.id = 0L;
+		this.brand = "";
+		this.model = "";
+		this.drivers = new ArrayList<Driver>();
+		this.fuel = Fuel.DIESEL;
+	}
+	
+	public Vehicle(Long id) {
+		this.id = id;
+		this.brand = "";
+		this.model = "";
+		this.drivers = new ArrayList<Driver>();
+		this.fuel = Fuel.DIESEL;
 	}
 	
 	public String getBrand() {

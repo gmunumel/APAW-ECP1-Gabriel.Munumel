@@ -1,11 +1,11 @@
 package pd.composite;
 
-public class DriverLeaf extends DriverComponent {
+public class DriverLeaf extends DriverComponent { 
 	
-	private Driver driver;
+	private Adapter driverAdapter;
 	
-	public DriverLeaf(Driver driver) {
-        this.driver = driver;
+	public DriverLeaf(Adapter driverAdapter) {
+        this.driverAdapter = driverAdapter;
     }
 
     @Override
@@ -15,16 +15,21 @@ public class DriverLeaf extends DriverComponent {
 
     @Override
     public void add(DriverComponent driverComponent) {
-    		// Do nothing because is leaf
+    		throw new UnsupportedOperationException("Operación no soportada");
     }
 
     @Override
     public void remove(DriverComponent driverComponent) {
     		// Do nothing because is leaf
     }
-
-    public Driver getDriver() {
-        return driver;
+    
+    @Override
+    public int numberOfDriversPerLeaf() {
+        return 1;
     }
 
+    @Override
+    public String toString() {
+        return "Hoja[" + this.driverAdapter.view() + "]";
+    }
 }

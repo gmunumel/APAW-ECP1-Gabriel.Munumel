@@ -27,6 +27,12 @@ Fuentes:
 
 Se ha aplicado el patrón para ambas entidades `Driver` y `Vehicle`. 
 
+## Patrón de Diseño Composite
+
+Se ha aplicado el patrón sobre la entidad `Driver` de forma que se tenga agrupaciones del mismo. No obstante se ha
+trabajado con ella sin modificar su interfaz pública o la de cualquiera de las entidades dadas en la retroalimentación. 
+
+
 ## Patrón de Diseño Strategy
 
 El patrón de diseño _Strategy_ es un patrón de comportamiento que permite seleccionar un algoritmo 

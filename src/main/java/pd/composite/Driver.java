@@ -14,6 +14,18 @@ public class Driver {
 		this.phone = phone;
 	}
 	
+	public Driver(int id) {
+		this.id = id;
+		this.reference = "";
+		this.phone = 0L;
+	}
+	
+	public Driver() {
+		this.id = 0;
+		this.reference = "";
+		this.phone = 0L;
+	}
+	
 	public void setPhone(Long phone) {
 		this.phone = phone;
 	}
