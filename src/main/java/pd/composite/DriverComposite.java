@@ -32,11 +32,11 @@ public class DriverComposite  extends DriverComponent {
     
     @Override
     public String toString() {
-    		String result = "";
+    		StringBuilder result = new StringBuilder(); 
     		for(DriverComponent dc : driverComponentList) {
-    			result += dc.toString();
+    			result.append(dc.toString());
     		}
-    		result += "[" + this.name + "]";
-        return result;
+    		result.append("[" + this.name + "]");
+        return result.toString();
     }
 }
