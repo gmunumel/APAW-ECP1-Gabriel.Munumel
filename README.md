@@ -32,6 +32,10 @@ Se ha aplicado el patrón para ambas entidades `Driver` y `Vehicle`.
 Se ha aplicado el patrón sobre la entidad `Driver` de forma que se tenga agrupaciones del mismo. No obstante se ha
 trabajado con ella sin modificar su interfaz pública o la de cualquiera de las entidades dadas en la retroalimentación. 
 
+A continuación se muestra el diagrama UML:
+
+![alt text](composite-uml.png "Patrón de Diseño Composite")
+
 
 ## Patrón de Diseño Strategy
 

@@ -22,18 +22,18 @@ public class Vehicle {
 		this.model = model;
 		this.drivers = drivers;
 		this.fuel = fuel;
-	}
+	} 
 	
-	public Vehicle() {
-		this.id = 0L;
+	public Vehicle(Long id) {
+		this.id = id;
 		this.brand = "";
 		this.model = "";
 		this.drivers = new ArrayList<Driver>();
 		this.fuel = Fuel.DIESEL;
 	}
 	
-	public Vehicle(Long id) {
-		this.id = id;
+	public Vehicle() {
+		this.id = 0L;
 		this.brand = "";
 		this.model = "";
 		this.drivers = new ArrayList<Driver>();
