@@ -40,7 +40,7 @@ public class DriverComponentTest {
         this.root.add(compt1);
         this.root.add(new DriverLeaf(adapter7));
 
-        this.compt11 = new DriverComposite("compt11");
+        this.compt11 = new DriverComposite("compt11"); 
         this.compt1.add(compt11);
         this.compt1.add(new DriverLeaf(adapter4));
         this.compt12 = new DriverComposite("compt12");
@@ -54,8 +54,35 @@ public class DriverComponentTest {
     }
 
     @Test
-    public void testNumberOfDriversIfLeaf() { 
+    public void testNumberOfDriverComponentsIfLeaf() { 
         assertEquals(1, this.leaf.numberOfDriversPerLeaf());
     }
 
+    @Test
+    public void testNumberOfDriverComponentsIfComposite() {
+        assertEquals(3, this.root.numberOfDriversPerLeaf());
+        assertEquals(2, this.compt11.numberOfDriversPerLeaf());
+    }
+
+    @Test
+    public void testAddLeaf() {
+        exception.expect(UnsupportedOperationException.class);
+        this.leaf.add(new DriverLeaf(new Adapter(new Driver(2))));
+    }
+    
+    @Test
+    public void testTrueIfComposite() {
+    		assertEquals(true, this.compt12.isComposite());
+    }
+    
+    @Test
+    public void testFalseIfLeaf() {
+    		assertEquals(false, this.leaf.isComposite());
+    }
+    
+    @Test
+    public void testDriverComponentToString() {
+    		assertEquals("[Hoja=1][Hoja=2][Hoja=3][compt11][Hoja=4][Hoja=-5][Hoja=6][compt12][compt1][Hoja=7][raiz]", 
+    				this.root.toString()); 
+    }
 }

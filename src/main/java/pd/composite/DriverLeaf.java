@@ -17,11 +17,6 @@ public class DriverLeaf extends DriverComponent {
     public void add(DriverComponent driverComponent) {
     		throw new UnsupportedOperationException("Operación no soportada");
     }
-
-    @Override
-    public void remove(DriverComponent driverComponent) {
-    		// Do nothing because is leaf
-    }
     
     @Override
     public int numberOfDriversPerLeaf() {
@@ -30,6 +25,6 @@ public class DriverLeaf extends DriverComponent {
 
     @Override
     public String toString() {
-        return "Hoja[" + this.driverAdapter.view() + "]";
+        return "[Hoja=" + this.driverAdapter.view() + "]";
     }
 }

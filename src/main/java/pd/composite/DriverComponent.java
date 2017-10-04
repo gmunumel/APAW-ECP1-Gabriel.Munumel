@@ -6,7 +6,5 @@ public abstract class DriverComponent {
     
     public abstract void add(DriverComponent driverComponent);
     
-    public abstract void remove(DriverComponent driverComponent);
-    
     public abstract int numberOfDriversPerLeaf();
 }

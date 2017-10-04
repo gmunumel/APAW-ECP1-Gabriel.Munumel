@@ -24,12 +24,6 @@ public class DriverComposite  extends DriverComponent {
         assert driverComponent != null;
         driverComponentList.add(driverComponent);
     }
-
-    @Override
-    public void remove(DriverComponent driverComponent) {
-        assert driverComponent != null;
-        driverComponentList.remove(driverComponent);
-    }
     
     @Override
     public int numberOfDriversPerLeaf() {
@@ -38,6 +32,11 @@ public class DriverComposite  extends DriverComponent {
     
     @Override
     public String toString() {
-        return "[" + this.name + "]";
+    		String result = "";
+    		for(DriverComponent dc : driverComponentList) {
+    			result += dc.toString();
+    		}
+    		result += "[" + this.name + "]";
+        return result;
     }
 }
