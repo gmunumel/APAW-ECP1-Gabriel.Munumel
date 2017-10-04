@@ -7,7 +7,7 @@ public class VehicleFactorySingleton {
 	
 	private static VehicleFactorySingleton vehicleFactorySingleton;
 	
-	private Map<Long, Vehicle> vehicles;
+	private Map<Long, Vehicle> vehicles; 
 	
 	private VehicleFactorySingleton() {
 		this.vehicles = new HashMap<Long, Vehicle>();
@@ -20,12 +20,12 @@ public class VehicleFactorySingleton {
 		return vehicleFactorySingleton;
 	}
 	
-	public Vehicle getVehicle(Long key) {  
-		return vehicles.computeIfAbsent(key, k -> new VehicleFlyweight(key).add());
+	public Vehicle getVehicle(Vehicle vehicle) { 
+		return this.vehicles.computeIfAbsent(vehicle.getId(), k -> vehicle);
 	}
 	
-	public void removeVehicle(Long key) {
-        this.vehicles.remove(key); 
+	public void removeVehicle(Vehicle vehicle) {
+        this.vehicles.remove(vehicle.getId()); 
     }
 	
 	public int getVehiclesSize() {

@@ -7,7 +7,7 @@ import static org.junit.Assert.assertSame;
 import org.junit.Before;
 import org.junit.Test;
 
-import pd.factoryandsingleton.VehicleFactorySingleton;
+import pd.factoryandsingleton.VehicleFactorySingleton; 
 
 public class VehicleFactorySingletonTest {
 
@@ -28,23 +28,23 @@ public class VehicleFactorySingletonTest {
 	
 	@Test
 	public void testVehicleFactorySingletonCreateVehicleLong() { 
-		Vehicle vehicle = VehicleFactorySingleton.getInstance().getVehicle(1L);
+		Vehicle vehicle = VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
 		assertNotNull(vehicle); 
 	}
 	
 	@Test
 	public void testVehicleFactorySingletonVehicleFound() { 
-		Vehicle vehicle1 = VehicleFactorySingleton.getInstance().getVehicle(1L);
-		Vehicle vehicle2 = VehicleFactorySingleton.getInstance().getVehicle(1L);
+		Vehicle vehicle1 = VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
+		Vehicle vehicle2 = VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
 		assertSame(vehicle1, vehicle2); 
 	}
 	
 	@Test
 	public void testVehicleFactorySingletonRemoveVehicle() { 
-		VehicleFactorySingleton.getInstance().getVehicle(1L);
-		VehicleFactorySingleton.getInstance().removeVehicle(2L);
+		VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
+		VehicleFactorySingleton.getInstance().removeVehicle(new Vehicle(2L));
 		assertEquals(1, VehicleFactorySingleton.getInstance().getVehiclesSize()); 
-		VehicleFactorySingleton.getInstance().removeVehicle(1L); 
+		VehicleFactorySingleton.getInstance().removeVehicle(new Vehicle(1L)); 
 		assertEquals(0, VehicleFactorySingleton.getInstance().getVehiclesSize()); 
 	} 
 	

@@ -15,13 +15,13 @@ Para los tests se ha seguido la misma estructura.
 ## Patrón de Diseño Factory con Singleton
 
 Se ha realizado este apartado tomando ideas del patrón _Flyweight_, en el cual se tiene un valor intrinseco
-(permanente) que se puede compartir y un valor extrinseco (cambiante) que se puede transmitir. Sin embargo, no se
-ha implementado por completo dado que complicaba la solución del enunciado.
+(permanente) que se puede compartir y un valor extrinseco (cambiante) que se puede transmitir. TODO
 
 Fuentes: 
 * [http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2](http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2)
 * [http://coding-geek.com/design-pattern-factory-patterns/](http://coding-geek.com/design-pattern-factory-patterns/)
-* [https://en.wikipedia.org/wiki/Flyweight_pattern](https://en.wikipedia.org/wiki/Flyweight_pattern)
+* [https://goo.gl/eccc5c](https://goo.gl/eccc5c)
+* [http://www.oodesign.com/flyweight-pattern-wargame-example-java-sourcecode.html](http://www.oodesign.com/flyweight-pattern-wargame-example-java-sourcecode.html)
 
 ## Patrón de Diseño Builder
 
