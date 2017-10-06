@@ -8,7 +8,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
     DriverTest.class,
     VehicleTest.class,
-    DriverComponentTest.class
+    VehicleComponentTest.class
 })
 public class AllCompositeTests {
 }

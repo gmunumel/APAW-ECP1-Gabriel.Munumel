@@ -1,11 +1,11 @@
 package pd.composite;
 
-public class DriverLeaf extends DriverComponent { 
+public class VehicleLeaf extends VehicleComponent { 
 	
-	private Driver driver;
+	private Vehicle vehicle;
 	
-	public DriverLeaf(Driver driver) {
-        this.driver = driver;
+	public VehicleLeaf(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 
     @Override
@@ -14,18 +14,18 @@ public class DriverLeaf extends DriverComponent {
     }
 
     @Override
-    public void add(DriverComponent driverComponent) {
+    public void add(VehicleComponent driverComponent) {
     		throw new UnsupportedOperationException("Operación no soportada");
     }
     
     @Override
-    public int numberOfDriversPerLeaf() {
+    public int numberOfVehiclesPerLeaf() {
         return 1;
     }
     
     @Override
-    public int view() {
-        return this.driver.getId();
+    public Long view() {
+        return this.vehicle.getId();
     }
 
     @Override
