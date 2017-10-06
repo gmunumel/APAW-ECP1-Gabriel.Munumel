@@ -20,12 +20,16 @@ public class VehicleFactorySingleton {
 		return vehicleFactorySingleton;
 	}
 	
-	public Vehicle getVehicle(Vehicle vehicle) { 
-		return this.vehicles.computeIfAbsent(vehicle.getId(), k -> vehicle);
+	public Long getVehicle(Long key) {
+		return this.vehicles.containsKey(key) ? key : -1L;
 	}
 	
-	public void removeVehicle(Vehicle vehicle) {
-        this.vehicles.remove(vehicle.getId()); 
+	public void addVehicle(Long key) {
+		this.vehicles.put(key, null);
+	}
+	
+	public void removeVehicle(Long key) {
+        this.vehicles.remove(key); 
     }
 	
 	public int getVehiclesSize() {

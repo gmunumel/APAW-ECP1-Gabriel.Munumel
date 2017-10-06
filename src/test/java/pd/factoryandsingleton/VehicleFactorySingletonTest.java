@@ -28,23 +28,28 @@ public class VehicleFactorySingletonTest {
 	
 	@Test
 	public void testVehicleFactorySingletonCreateVehicleLong() { 
-		Vehicle vehicle = VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
-		assertNotNull(vehicle); 
+		VehicleFactorySingleton.getInstance().addVehicle(1L);
+		assertEquals(1, VehicleFactorySingleton.getInstance().getVehiclesSize()); 
 	}
 	
 	@Test
-	public void testVehicleFactorySingletonVehicleFound() { 
-		Vehicle vehicle1 = VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
-		Vehicle vehicle2 = VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
-		assertSame(vehicle1, vehicle2); 
+	public void testVehicleFactorySingletonVehicleFound() {
+		VehicleFactorySingleton.getInstance().addVehicle(1L);
+		assertEquals(1L, VehicleFactorySingleton.getInstance().getVehicle(1L), 0); 
+	}
+	
+	@Test
+	public void testVehicleFactorySingletonVehicleNotFound() {
+		VehicleFactorySingleton.getInstance().addVehicle(1L);
+		assertEquals(-1L, VehicleFactorySingleton.getInstance().getVehicle(2L), 0); 
 	}
 	
 	@Test
 	public void testVehicleFactorySingletonRemoveVehicle() { 
-		VehicleFactorySingleton.getInstance().getVehicle(new Vehicle(1L));
-		VehicleFactorySingleton.getInstance().removeVehicle(new Vehicle(2L));
+		VehicleFactorySingleton.getInstance().addVehicle(1L);
+		VehicleFactorySingleton.getInstance().removeVehicle(2L);
 		assertEquals(1, VehicleFactorySingleton.getInstance().getVehiclesSize()); 
-		VehicleFactorySingleton.getInstance().removeVehicle(new Vehicle(1L)); 
+		VehicleFactorySingleton.getInstance().removeVehicle(1L); 
 		assertEquals(0, VehicleFactorySingleton.getInstance().getVehiclesSize()); 
 	} 
 	
