@@ -12,24 +12,13 @@ Cada apartado del enunciado se ha dividido por carpetas y no se han mezclado las
 
 Para los tests se ha seguido la misma estructura.
 
-## Patrón de Diseño Factory con Singleton
-
-Se ha realizado este apartado tomando ideas del patrón _Flyweight_, en el cual se tiene un valor intrinseco
-(permanente) que se puede compartir y un valor extrinseco (cambiante) que se puede transmitir. TODO
-
-Fuentes: 
-* [http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2](http://www.avajava.com/tutorials/lessons/flyweight-pattern.html?page=2)
-* [http://coding-geek.com/design-pattern-factory-patterns/](http://coding-geek.com/design-pattern-factory-patterns/)
-* [https://goo.gl/eccc5c](https://goo.gl/eccc5c)
-* [http://www.oodesign.com/flyweight-pattern-wargame-example-java-sourcecode.html](http://www.oodesign.com/flyweight-pattern-wargame-example-java-sourcecode.html)
-
 ## Patrón de Diseño Builder
 
-Se ha aplicado el patrón para ambas entidades `Driver` y `Vehicle`. 
+Se ha aplicado el patrón para ambas entidades `Vehicle` y `Driver`. 
 
 ## Patrón de Diseño Composite
 
-Se ha aplicado el patrón sobre la entidad `Driver` de forma que se tenga agrupaciones del mismo. No obstante se ha
+Se ha aplicado el patrón sobre la entidad `Vehicle` de forma que se tenga agrupaciones del mismo. No obstante se ha
 trabajado con ella sin modificar su interfaz pública o la de cualquiera de las entidades dadas en la retroalimentación. 
 
 A continuación se muestra el diagrama UML:
