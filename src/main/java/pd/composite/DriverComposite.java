@@ -29,6 +29,10 @@ public class DriverComposite  extends DriverComponent {
     public int numberOfDriversPerLeaf() {
         return this.driverComponentList.size();
     }
+    @Override
+    public int view() {
+        return -1;
+    }
     
     @Override
     public String toString() {

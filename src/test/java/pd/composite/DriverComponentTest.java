@@ -22,34 +22,26 @@ public class DriverComponentTest {
     public ExpectedException exception = ExpectedException.none();
 
     @Before
-    public void ini() {    		
-    		Adapter adapter1 = new Adapter(new Driver(1));
-    		Adapter adapter7 = new Adapter(new Driver(7));
-    		Adapter adapter4 = new Adapter(new Driver(4));
-    		Adapter adapter2 = new Adapter(new Driver(2));
-    		Adapter adapter3 = new Adapter(new Driver(3));
-    		Adapter adapterMinus5 = new Adapter(new Driver(-5));
-    		Adapter adapter6 = new Adapter(new Driver(6));
-    		
+    public void ini() {    		    		
         this.root = new DriverComposite("raiz");
 
-        this.leaf = new DriverLeaf(adapter1);
+        this.leaf = new DriverLeaf(new Driver(1));
         this.root.add(leaf);
         this.compt1 = new DriverComposite("compt1");
         this.root.add(compt1);
-        this.root.add(new DriverLeaf(adapter7));
+        this.root.add(new DriverLeaf(new Driver(7)));
 
         this.compt11 = new DriverComposite("compt11"); 
         this.compt1.add(compt11);
-        this.compt1.add(new DriverLeaf(adapter4));
+        this.compt1.add(new DriverLeaf(new Driver(4)));
         this.compt12 = new DriverComposite("compt12");
         this.compt1.add(compt12);
 
-        this.compt11.add(new DriverLeaf(adapter2));
-        this.compt11.add(new DriverLeaf(adapter3));
+        this.compt11.add(new DriverLeaf(new Driver(2)));
+        this.compt11.add(new DriverLeaf(new Driver(3)));
 
-        this.compt12.add(new DriverLeaf(adapterMinus5));
-        this.compt12.add(new DriverLeaf(adapter6));
+        this.compt12.add(new DriverLeaf(new Driver(-5)));
+        this.compt12.add(new DriverLeaf(new Driver(6)));
     }
 
     @Test
@@ -66,7 +58,7 @@ public class DriverComponentTest {
     @Test
     public void testAddLeaf() {
         exception.expect(UnsupportedOperationException.class);
-        this.leaf.add(new DriverLeaf(new Adapter(new Driver(2))));
+        this.leaf.add(new DriverLeaf(new Driver(2)));
     }
     
     @Test
@@ -77,6 +69,16 @@ public class DriverComponentTest {
     @Test
     public void testFalseIfLeaf() {
     		assertEquals(false, this.leaf.isComposite());
+    }
+    
+    @Test
+    public void testViewIfleaf() {
+    		assertEquals(1, this.leaf.view());
+    }
+    
+    @Test
+    public void testViewIfComposite() {
+    		assertEquals(-1, this.compt1.view());
     }
     
     @Test

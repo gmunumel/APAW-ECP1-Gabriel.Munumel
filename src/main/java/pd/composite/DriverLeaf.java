@@ -2,10 +2,10 @@ package pd.composite;
 
 public class DriverLeaf extends DriverComponent { 
 	
-	private Adapter driverAdapter;
+	private Driver driver;
 	
-	public DriverLeaf(Adapter driverAdapter) {
-        this.driverAdapter = driverAdapter;
+	public DriverLeaf(Driver driver) {
+        this.driver = driver;
     }
 
     @Override
@@ -22,9 +22,14 @@ public class DriverLeaf extends DriverComponent {
     public int numberOfDriversPerLeaf() {
         return 1;
     }
+    
+    @Override
+    public int view() {
+        return this.driver.getId();
+    }
 
     @Override
     public String toString() {
-        return "[Hoja=" + this.driverAdapter.view() + "]";
+        return "[Hoja=" + this.view() + "]";
     }
 }
