@@ -4,8 +4,8 @@ public class VehicleLeaf extends VehicleComponent {
 	
 	private Vehicle vehicle;
 	
-	public VehicleLeaf(Vehicle vehicle) {
-        this.vehicle = vehicle;
+	public VehicleLeaf(Long key) {
+        this.vehicle = new Vehicle(key);
     }
 
     @Override

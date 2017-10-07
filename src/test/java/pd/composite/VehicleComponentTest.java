@@ -25,23 +25,23 @@ public class VehicleComponentTest {
     public void ini() {    		    		
         this.root = new VehicleComposite("raiz");
 
-        this.leaf = new VehicleLeaf(new Vehicle(1L));
+        this.leaf = new VehicleLeaf(1L); 
         this.root.add(leaf);
         this.compt1 = new VehicleComposite("compt1");
         this.root.add(compt1);
-        this.root.add(new VehicleLeaf(new Vehicle(7L)));
+        this.root.add(new VehicleLeaf(7L));
 
         this.compt11 = new VehicleComposite("compt11"); 
         this.compt1.add(compt11);
-        this.compt1.add(new VehicleLeaf(new Vehicle(4L)));
+        this.compt1.add(new VehicleLeaf(4L));
         this.compt12 = new VehicleComposite("compt12");
         this.compt1.add(compt12);
 
-        this.compt11.add(new VehicleLeaf(new Vehicle(2L)));
-        this.compt11.add(new VehicleLeaf(new Vehicle(3L)));
+        this.compt11.add(new VehicleLeaf(2L));
+        this.compt11.add(new VehicleLeaf(3L));
 
-        this.compt12.add(new VehicleLeaf(new Vehicle(-5L)));
-        this.compt12.add(new VehicleLeaf(new Vehicle(6L)));
+        this.compt12.add(new VehicleLeaf(-5L));
+        this.compt12.add(new VehicleLeaf(6L));
     }
 
     @Test
@@ -58,7 +58,7 @@ public class VehicleComponentTest {
     @Test
     public void testAddLeaf() {
         exception.expect(UnsupportedOperationException.class);
-        this.leaf.add(new VehicleLeaf(new Vehicle(2L)));
+        this.leaf.add(new VehicleLeaf(2L));
     }
     
     @Test
