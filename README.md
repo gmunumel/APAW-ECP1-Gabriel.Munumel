@@ -48,7 +48,7 @@ tipo de ordenación en tiempo de ejecución. Para ello se tienen 4 algoritmos: `
 `Strategy`. Es el contexto `Context` sabiendo de las estrategias de `Strategy` el que delega su ejecución en él. Por último, el `Context` comunica el resultado a un programa cliente o en mi caso solo ejecuta con el método `arrange`. 
 
 El patrón _Strategy_ permite mucha flexibilidad a la hora de la ejecución, de forma que si el cliente desea
-ejecutar un algoritmo de ordenación dependiendo de algún criterio se puede hacer adaptar sin mayores 
+ejecutar un algoritmo de ordenación dependiendo de algún criterio se puede adaptar sin mayores 
 inconvenientes. La mantenibilidad se ve favorablemente impactada dado que si en el futuro se desea 
 agregar un nuevo algoritmo de ordenación solo se debe crear su clase que implemente el método `sort` y 
 utilizarla como otra estrategia mas. La limpieza en el código también es mejorada dado que no se requiere

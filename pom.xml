@@ -159,9 +159,9 @@
 
 	<developers>
 		<developer>
-			<name>Name</name>
+			<name>Gabriel Muñumel</name>
 			<id>Id</id>
-			<email>mail@gmail.com</email>
+			<email>gabriel.munumel.mesa@alumnos.upm.es</email>
 			<organization>MIW UPM</organization>
 			<roles>
 				<role>Architect</role>
